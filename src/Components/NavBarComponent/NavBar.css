@@ -1,0 +1,32 @@
+.navbar {
+  margin-bottom: 0;
+  border-radius: 0;
+  background-color: #563d7c;
+  height: 90px;
+  color: white;
+}
+.img-logo{
+  height: 70px;
+  width: 70px;
+}
+.logoutlink{
+    color: white;
+}
+.logo-txt{
+  display: flex;
+}
+.container-fluid span{
+  margin-left: 10px;;
+}
+.btn-bd-logout {
+  height: 40px;
+    width: 100px;
+  font-weight: 500;
+    color: #ffe484;
+    border-color: #ffe484;
+    background: transparent;    
+}
+.btn-bd-logout:hover{
+  background-color: #ffe484;
+  color: black;
+}

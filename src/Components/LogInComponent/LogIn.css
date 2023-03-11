@@ -1,0 +1,53 @@
+.Auth-form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+    height: 90vh;
+    background-image: url(https://sericulture.karnataka.gov.in/storage/slids/1575527518.jpg);
+    background-repeat: round;
+    /* background-image: url('https://sericulture.karnataka.gov.in/storage/slids/1575276042.jpg');
+    background-repeat: round; */
+  }
+  
+  .Auth-form {
+    width: 420px;
+    box-shadow: rgb(0 0 0 / 16%) 1px 1px 10px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    border-radius: 8px;
+    background-color: white;
+  }
+  
+  .Auth-form-content {
+    padding-left: 12%;
+    padding-right: 12%;
+  }
+  
+  .Auth-form-title {
+    text-align: center;
+    margin-bottom: 1em;
+    font-size: 24px;
+    color: rgb(34, 34, 34);
+    font-weight: 800;
+  }
+  
+  label {
+    font-size: 14px;
+    font-weight: 600;
+    color: rgb(34, 34, 34);
+  }
+  /* .navbar {
+    margin-bottom: 0;
+    border-radius: 0;
+    background-color: darkcyan;
+    height: 90px;
+  } */
+
+/* .img-logo{
+    height: 60px;
+    width: 60px;
+} */
+.cfrg{
+  justify-content: flex-start;
+  height: 90px;
+}

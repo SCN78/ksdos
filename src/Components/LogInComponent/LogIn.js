@@ -8,7 +8,13 @@ function Login() {
     const [password, setPassword] = useState('');
     const onLogin = (e) => {
         e.preventDefault();
-        authCtx.onLogIn({userName:email,Role:"Admin"});
+        if(email === "adminuser" ){
+            authCtx.onLogIn({userName:email,Role:"Admin"});
+        }
+        else{
+            authCtx.onLogIn({userName:email,Role:"User"});
+        }
+        
     }
 
     return (

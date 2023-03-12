@@ -7,15 +7,40 @@ import appComponents from '../../Services/AppService';
 function DashBoard(){
     const authCtx = useContext(AuthContext);
     const componentCtx = useContext(ComponentContext);
-    const [text,updateText] = useState('English');    
+    const [text,updateText] = useState({
+        BSF:"Basic Seed Farm",
+        KNGL:"Kunigal"
+    });    
 
     useEffect(()=> {
-        // if(authCtx.isEnglish){
-        //     updateText('English')
-        // }
-        // else{
-        //     updateText('ಕೊರೋನಾ ಬಗ್ಗೆ ಮಾಹಿತಿ ')
-        // }
+        if(authCtx.isEnglish){
+            updateText({
+                BSF:"Basic Seed Farm",
+                KNGL:"Kunigal",
+                GRNG:"Grainages",
+                MSRS:"Mysorerace ",
+                SDFM:"Seed Farms",
+                CCNMRKT:"Cocoon Market",
+                TSC:"Technical Service Centre",
+                RLNG:"Reeling",
+                SLKExng:"Silk Exchange",
+                SCTI:"Sericulture Training Institutes"
+            })
+        }
+        else{
+            updateText({
+                BSF:"ಬೇಸಿಕ್ ಸೀಡ್ ಫಾರ್ಮ್",
+                KNGL:"ಕುಣಿಗಲ್ ",
+                GRNG:"ಗ್ರಾಯಿನಾಗೇಶ್ ",
+                MSRS:"ಮೈಸೂರೇರಸ್ ",
+                SDFM:"ಸೀಡ್ ಫಾರ್ಮ್ಸ್ ",
+                CCNMRKT:"ಕಕೂನ್ ಮಾರ್ಕೆಟ್ ",
+                TSC:"ಟೆಕ್ನಿಕಲ್ ಸರ್ವಿಸ್ ಸೆಂಟರ್",
+                RLNG:"ರೀಲಿಂಗ್",
+                SLKExng:"ಸಿಲ್ಕ್ ಎಕ್ಸ್ಚೇಂಜ್",
+                SCTI:"ಸೇರಿಚುಲ್ಟುರೆ ಟ್ರೇನಿಂಗ ಇನ್ಸ್ಟಿಟ್ಯುಟ್ಸ್   "
+            })
+        }
     },[authCtx.isEnglish]);
     const navigate = (id) =>{
         componentCtx.changeComponent(1);
@@ -28,8 +53,8 @@ function DashBoard(){
                         <div className="card" onClick={navigate} >
                             <img className="card-img" src="https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/bologna-3.jpg" alt="Bologna" />
                                 <div className="card-img-overlay text-white d-flex flex-column justify-content-center">
-                                    <h4 className="card-title">Basic Seed Farm</h4>
-                                    <h6 className="card-subtitle mb-2">Kunigal</h6>                                    
+                                    <h4 className="card-title">{text.BSF}</h4>
+                                    <h6 className="card-subtitle mb-2">{text.KNGL}</h6>                                    
                                 </div>
                         </div>
                     </div>
@@ -37,8 +62,8 @@ function DashBoard(){
                         <div className="card" onClick={navigate}>
                             <img className="card-img" src="https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/bologna-3.jpg" alt="Cologna" />
                                 <div className="card-img-overlay text-white d-flex flex-column justify-content-center">
-                                    <h4 className="card-title">Grainages </h4>
-                                    <h6 className="card-subtitle mb-2">(P3,P2,P1)-Mysorerace</h6>                                    
+                                    <h4 className="card-title">{text.GRNG}</h4>
+                                    <h6 className="card-subtitle mb-2">(P3,P2,P1)-{text.MSRS}</h6>                                    
                                 </div>
                         </div>
                     </div>
@@ -46,7 +71,7 @@ function DashBoard(){
                         <div className="card" onClick={navigate}>
                             <img className="card-img" src="https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/bologna-3.jpg" alt="Cologna" />
                                 <div className="card-img-overlay text-white d-flex flex-column justify-content-center">
-                                    <h4 className="card-title">Seed Farms </h4>
+                                    <h4 className="card-title">{text.SDFM} </h4>
                                     <h6 className="card-subtitle mb-2">(P4,P3)</h6>                                    
                                 </div>
                         </div>
@@ -55,7 +80,7 @@ function DashBoard(){
                         <div className="card" onClick={navigate}>
                             <img className="card-img" src="https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/bologna-3.jpg" alt="Cologna" />
                                 <div className="card-img-overlay text-white d-flex flex-column justify-content-center">
-                                    <h4 className="card-title">Cocoon Market</h4>
+                                    <h4 className="card-title">{text.CCNMRKT}</h4>
                                     <h6 className="card-subtitle mb-2">(Commercial,Seed)</h6>                                   
                                 </div>
                         </div>
@@ -67,7 +92,7 @@ function DashBoard(){
                         <div className="card" onClick={navigate}>
                             <img className="card-img" src="https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/bologna-3.jpg" alt="Bologna" />
                             <div className="card-img-overlay text-white d-flex flex-column justify-content-center">
-                                <h4 className="card-title">Technical Service Centre</h4>
+                                <h4 className="card-title">{text.TSC}</h4>
                                 <h6 className="card-subtitle mb-2">(General &Seed Area- MSC &BV)</h6>
                             </div>
                         </div>
@@ -76,7 +101,7 @@ function DashBoard(){
                         <div className="card" onClick={navigate}>
                             <img className="card-img" src="https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/bologna-3.jpg" alt="Bologna" />
                             <div className="card-img-overlay text-white d-flex flex-column justify-content-center">
-                                <h4 className="card-title">Technical Service Centre</h4>
+                                <h4 className="card-title">{text.TSC}</h4>
                                 <h6 className="card-subtitle mb-2">(Reeling)</h6>
                             </div>
                         </div>
@@ -85,7 +110,7 @@ function DashBoard(){
                         <div className="card" onClick={navigate}>
                             <img className="card-img" src="https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/bologna-3.jpg" alt="Bologna" />
                             <div className="card-img-overlay text-white d-flex flex-column justify-content-center">
-                                <h4 className="card-title">Silk Exchange</h4>                                
+                                <h4 className="card-title">{text.SLKExng}</h4>                                
                             </div>
                         </div>
                     </div>
@@ -93,7 +118,7 @@ function DashBoard(){
                         <div className="card" onClick={navigate}>
                             <img className="card-img" src="https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/bologna-3.jpg" alt="Bologna" />
                             <div className="card-img-overlay text-white d-flex flex-column justify-content-center">
-                                <h4 className="card-title">Sericulture Training Institutes</h4>                                
+                                <h4 className="card-title">{text.SCTI}</h4>                                
                             </div>
                         </div>
                     </div>

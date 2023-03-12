@@ -5,7 +5,7 @@ export default function BSF()
 {
     const componentCtx = useContext(ComponentContext);
     const navigate = () =>{
-        componentCtx.changeComponent(111);
+        componentCtx.changeComponent(11);
     }
     return(
         <>

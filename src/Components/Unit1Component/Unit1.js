@@ -5,7 +5,7 @@ import './Unit1.css';
 export default function Unit1(){
     const componentCtx = useContext(ComponentContext);
     const navigate = () =>{
-        componentCtx.changeComponent(1);
+        componentCtx.changeComponent(0);
     }
     return(
         <>

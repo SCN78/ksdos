@@ -1,7 +1,8 @@
 import { useContext, useEffect, useState } from 'react';
 import AuthContext from '../../Contexts/AuthContext';
 import ComponentContext from '../../Contexts/ComponentContext';
-import './DashBoard.css'
+import './DashBoard.css';
+import appComponents from '../../Services/AppService';
 
 function DashBoard(){
     const authCtx = useContext(AuthContext);
@@ -17,7 +18,7 @@ function DashBoard(){
         // }
     },[authCtx.isEnglish]);
     const navigate = (id) =>{
-        componentCtx.changeComponent(11);
+        componentCtx.changeComponent(1);
     }
     return (
         <>         

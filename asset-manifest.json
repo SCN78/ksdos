@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/ksdos/static/css/main.a6e5c03d.css",
-    "main.js": "/ksdos/static/js/main.72a2df5a.js",
+    "main.js": "/ksdos/static/js/main.e9a6cf39.js",
     "static/js/787.19408fd8.chunk.js": "/ksdos/static/js/787.19408fd8.chunk.js",
     "index.html": "/ksdos/index.html",
     "main.a6e5c03d.css.map": "/ksdos/static/css/main.a6e5c03d.css.map",
-    "main.72a2df5a.js.map": "/ksdos/static/js/main.72a2df5a.js.map",
+    "main.e9a6cf39.js.map": "/ksdos/static/js/main.e9a6cf39.js.map",
     "787.19408fd8.chunk.js.map": "/ksdos/static/js/787.19408fd8.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a6e5c03d.css",
-    "static/js/main.72a2df5a.js"
+    "static/js/main.e9a6cf39.js"
   ]
 }

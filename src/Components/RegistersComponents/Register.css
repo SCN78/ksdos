@@ -1,5 +1,5 @@
 .sidenav {
-    width: 130px;
+    width: 150px;
     position: fixed;
     z-index: 1;   
     left: 10px;
@@ -7,15 +7,14 @@
     overflow-x: hidden;
     padding: 8px 0;
     --bs-bg-opacity: 1;
-    background-color: rgba(var(--bs-light-rgb), var(--bs-bg-opacity)) !important;
+   
   }
  
-  .sidenav a {
-    padding: 6px 8px 6px 16px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #2196F3;
-    display: block;
+  .sidenav button {
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    background-color: #89304d;
   }
   
   .sidenav a:hover {
@@ -23,11 +22,40 @@
   }
   
   .main {
-    margin-left: 140px; /* Same width as the sidebar + left position in px */
+    margin-left: 160px; /* Same width as the sidebar + left position in px */
     font-size: 28px; /* Increased text to enable scrolling */
     padding: 0px 10px;
   }
+  .register-form {
+    width: 100%;
+    box-shadow: rgb(0 0 0 / 16%) 1px 1px 10px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    border-radius: 8px;
+    background-color: white;
+  }
   
+  .register-form-content {
+    padding-left: 12%;
+    padding-right: 12%;
+  }
+  
+  .register-form-title {
+    text-align: center;
+    margin-bottom: 1em;
+    font-size: 24px;
+    color: rgb(34, 34, 34);
+    font-weight: 800;
+  }
+  
+  label {
+    font-size: 14px;
+    font-weight: 600;
+    color: rgb(34, 34, 34);
+  }
+  .j-c-c{
+    justify-content: center;
+  }
   @media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}

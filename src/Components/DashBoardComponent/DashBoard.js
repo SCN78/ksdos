@@ -1,7 +1,8 @@
 import { useContext, useEffect, useState } from 'react';
 import AuthContext from '../../Contexts/AuthContext';
 import ComponentContext from '../../Contexts/ComponentContext';
-import './DashBoard.css'
+import './DashBoard.css';
+import appComponents from '../../Services/AppService';
 
 function DashBoard(){
     const authCtx = useContext(AuthContext);
@@ -17,7 +18,7 @@ function DashBoard(){
         // }
     },[authCtx.isEnglish]);
     const navigate = (id) =>{
-        componentCtx.changeComponent(11);
+        componentCtx.changeComponent(1);
     }
     return (
         <>         
@@ -34,7 +35,7 @@ function DashBoard(){
                     </div>
                     <div className="col-10 col-sm-6 col-md-4 col-lg-3">
                         <div className="card" onClick={navigate}>
-                            <img className="card-img" src="https://assets.codepen.io/460692/internal/avatars/users/default.png" alt="Cologna" />
+                            <img className="card-img" src="https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/bologna-3.jpg" alt="Cologna" />
                                 <div className="card-img-overlay text-white d-flex flex-column justify-content-center">
                                     <h4 className="card-title">Grainages </h4>
                                     <h6 className="card-subtitle mb-2">(P3,P2,P1)-Mysorerace</h6>                                    
@@ -43,7 +44,7 @@ function DashBoard(){
                     </div>
                     <div className="col-10 col-sm-6 col-md-4 col-lg-3">
                         <div className="card" onClick={navigate}>
-                            <img className="card-img" src="https://assets.codepen.io/460692/internal/avatars/users/default.png" alt="Cologna" />
+                            <img className="card-img" src="https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/bologna-3.jpg" alt="Cologna" />
                                 <div className="card-img-overlay text-white d-flex flex-column justify-content-center">
                                     <h4 className="card-title">Seed Farms </h4>
                                     <h6 className="card-subtitle mb-2">(P4,P3)</h6>                                    
@@ -52,7 +53,7 @@ function DashBoard(){
                     </div>
                     <div className="col-10 col-sm-6 col-md-4 col-lg-3">
                         <div className="card" onClick={navigate}>
-                            <img className="card-img" src="https://assets.codepen.io/460692/internal/avatars/users/default.png" alt="Cologna" />
+                            <img className="card-img" src="https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/bologna-3.jpg" alt="Cologna" />
                                 <div className="card-img-overlay text-white d-flex flex-column justify-content-center">
                                     <h4 className="card-title">Cocoon Market</h4>
                                     <h6 className="card-subtitle mb-2">(Commercial,Seed)</h6>                                   

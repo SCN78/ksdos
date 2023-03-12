@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 
-const ComponentContext = React.createContext({componentId:1,changeComponent:undefined})
+const ComponentContext = React.createContext({componentId:0,changeComponent:undefined})
 
 export function ComponetContextProvider(props){
 
-    const [componentId,setComponentId] = useState(1);
+    const [componentId,setComponentId] = useState(0);
 
     const onChangeComponent = (id) =>{
         setComponentId(id);

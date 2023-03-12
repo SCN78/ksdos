@@ -28,23 +28,7 @@ export default function RS() {
         
             <div className="sidenav">
                 <button className="btn btn-success" id={1} onClick={showTab}>Add Record</button>
-                <button className="btn btn-success" id={2} onClick={showTab}>Add Record</button>
-                <div className="dropdown">
-                    <button
-                        className="btn btn-primary dropdown-toggle"
-                        type="button"
-                        id="dropdownMenuButton"
-                        data-mdb-toggle="dropdown"
-                        aria-expanded="false"
-                    >
-                        Dropdown button
-                    </button>
-                    <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <li><a className="dropdown-item" href="#">Action</a></li>
-                        <li><a className="dropdown-item" href="#">Another action</a></li>
-                        <li><a className="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
-                </div>
+                <button className="btn btn-success" id={2} onClick={showTab}>Reports</button>                
             </div>
             <div className="main">
                 {getComponent()}

@@ -25,7 +25,13 @@ export function AuthContextProvider(props){
         setUseEnglish(!isEnglish);
     }
     return (
-        <AuthContext.Provider value={{loggedUser:loggedUser,onLogIn:loginHandler,onLogOut:logOutHandler, isEnglish:isEnglish,changeLang:onChangeLang}}>
+        <AuthContext.Provider value={
+            {
+                loggedUser:loggedUser,
+                onLogIn:loginHandler,
+                onLogOut:logOutHandler,
+                isEnglish:isEnglish,
+                changeLang:onChangeLang}}>
             {props.children}
         </AuthContext.Provider>
     )

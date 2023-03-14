@@ -3,6 +3,7 @@ import AuthContext from "../../Contexts/AuthContext";
 import ComponentContext from "../../Contexts/ComponentContext";
 import '../TabComponent/VTab.css';
 import AddFarmer from "./AddFarmer";
+import FarmerList from "./FarmerList";
 
 export default function TSCG(){
     const authCtx = useContext(AuthContext);
@@ -17,6 +18,8 @@ export default function TSCG(){
         {
             case 1:
                 return <AddFarmer />;
+            case 2:
+                return <FarmerList />;
             default:
                 return '';
         }

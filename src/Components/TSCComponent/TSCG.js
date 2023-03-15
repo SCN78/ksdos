@@ -33,7 +33,8 @@ export default function TSCG(){
         <>
         <div className="sidenav">
             { authCtx.loggedUser.Role === "tscuser" && <button className="btn btn-success" id='1' onClick={showTab}>Register Farmer</button> }
-            <button className="btn btn-success" id='2' onClick={showTab}>Framers List</button>                
+            <button className="btn btn-success" id='2' onClick={showTab}>Framers List</button>   
+            { authCtx.loggedUser.Role === "tscadmin" && <button className="btn btn-success" id='3' onClick={showTab}>Reports</button> }             
             </div>
             <div className="main">
                 {getComponent()}

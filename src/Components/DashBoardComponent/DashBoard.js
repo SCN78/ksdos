@@ -43,7 +43,7 @@ function DashBoard(){
         }
     },[authCtx.isEnglish]);
     const navigate = (id) =>{
-        componentCtx.changeComponent(1);
+        componentCtx.changeComponent(1000);
     }
     return (
         <>         
@@ -53,8 +53,7 @@ function DashBoard(){
                         <div className="card" onClick={navigate} >
                             <img className="card-img" src="https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/bologna-3.jpg" alt="Bologna" />
                                 <div className="card-img-overlay text-white d-flex flex-column justify-content-center">
-                                    <h4 className="card-title">{text.BSF}</h4>
-                                    <h6 className="card-subtitle mb-2">{text.KNGL}</h6>                                    
+                                    <h4 className="card-title">{text.BSF}</h4>                                                                       
                                 </div>
                         </div>
                     </div>

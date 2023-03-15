@@ -5,6 +5,7 @@ import KsBreadCrumb from '../BreadCrumbComponent/KsBreadCrumb';
 import BSF from '../BSFComponent/BSF';
 import DashBoard from '../DashBoardComponent/DashBoard';
 import RS from '../RegistersComponents/RSComponent/RS';
+import RDashBoard from '../Reports-DashBoard/RDashBoard';
 import TSCG from '../TSCComponent/TSCG';
 import Unit1 from '../Unit1Component/Unit1';
 
@@ -18,7 +19,8 @@ function MainContent(){
         2: Unit1,
         1:BSF,
         11:RS,
-        100:TSCG
+        100:TSCG,
+        1000:RDashBoard
     };     
     const getComponent = () =>{
         var SomeComponent = componentNames[componentCtx.componentId];
@@ -30,11 +32,11 @@ function MainContent(){
    
     return (
         <>
-            {parseInt(componentCtx.componentId) > 0 &&
-            <div className="card bg-light text-dark m-b-10">
-                <KsBreadCrumb navigateTo = {navigateToHome}/>   
-            </div>}
-            <div className='maincontent'>
+           <div className="card bg-light text-dark" style={{textAlign:"center"}}>
+                {authCtx.loggedUser.unit === "TSCG" && <p>Technology Service Center - 1</p>} 
+                {authCtx.loggedUser.unit === "DOD" && <p>District - 1</p>}                  
+            </div>
+            <div className='maincontent'>                
                 {getComponent()}
             </div>
         </>

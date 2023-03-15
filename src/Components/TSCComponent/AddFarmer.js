@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function AddFarmer() {
+export default function AddFarmer(props) {
 
     const onUpdateUser = (e) => {
         e.preventDefault();
@@ -115,11 +115,13 @@ export default function AddFarmer() {
                             </tr>
                         </tbody>                       
                     </table>
-                    <div className="gap-2 mt-3" style={{textAlign:"center"}}>
-                        <button type="submit" className="btn btn-primary" onClick={onUpdateUser}>
-                            Update
-                        </button>
-                    </div>
+                    {props.userRole === 'tscuser' &&
+                        <div className="gap-2 mt-3" style={{ textAlign: "center" }}>
+                            <button type="submit" className="btn btn-primary" onClick={onUpdateUser}>
+                                Update
+                            </button>
+                        </div>
+                    }
                 </form>
                 <div className="d-grid-2 mt-3">
                     <div className="wrap-collabsible">
@@ -143,6 +145,42 @@ export default function AddFarmer() {
                     <div className="wrap-collabsible">
                         <input id="collapsible3" className="toggle" type="checkbox" />
                         <label htmlFor="collapsible3" className="lbl-toggle">Worm Test Register</label>
+                        <div className="collapsible-content"><div className="content-inner">
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="d-grid-2 mt-3">
+                    <div className="wrap-collabsible">
+                        <input id="collapsible3" className="toggle" type="checkbox" />
+                        <label htmlFor="collapsible3" className="lbl-toggle">Daily Brushing Register</label>
+                        <div className="collapsible-content"><div className="content-inner">
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="d-grid-2 mt-3">
+                    <div className="wrap-collabsible">
+                        <input id="collapsible3" className="toggle" type="checkbox" />
+                        <label htmlFor="collapsible3" className="lbl-toggle">Disinfectant stock Register</label>
+                        <div className="collapsible-content"><div className="content-inner">
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="d-grid-2 mt-3">
+                    <div className="wrap-collabsible">
+                        <input id="collapsible3" className="toggle" type="checkbox" />
+                        <label htmlFor="collapsible3" className="lbl-toggle">Smart card distribution Register</label>
+                        <div className="collapsible-content"><div className="content-inner">
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="d-grid-2 mt-3">
+                    <div className="wrap-collabsible">
+                        <input id="collapsible3" className="toggle" type="checkbox" />
+                        <label htmlFor="collapsible3" className="lbl-toggle">Cocoon Harvest Register</label>
                         <div className="collapsible-content"><div className="content-inner">
                         </div>
                         </div>

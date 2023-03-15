@@ -5,51 +5,38 @@ import './TSC.css';
 
 export default function FarmerList(props) {
 
-    const selectFarmer = () =>{
-        
+    const selectFarmer = () => {
+        props.showFarmer(2);
     }
 
     return (
         <>
-            <table className="table table-bordered table-stripped table-hover farmer-list-table" style={{fontSize:12}}>
+            <table className="table table-bordered table-stripped table-hover farmer-list-table" style={{ fontSize: 12 }}>
                 <thead>
-                    <tr onClick={selectFarmer}>
+                    <tr>
                         <th>Farmer ID</th>
+                        <th>EPIC ID</th>
                         <th>Farmer Name</th>
                         <th>Mobile</th>
                         <th>Aadhar No</th>
-                        {
-                            props.userRole === 'tscuser' &&
-                            <th></th>
-                        } 
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
+                    <tr onClick={selectFarmer}>
                         <td>1001</td>
+                        <td>11112</td>
                         <td>Farmer One</td>
                         <td>000000000</td>
                         <td>1234-568-9012</td>
-                        {
-                            props.userRole === 'tscuser' &&
-                            <td>
-                                <button className="btn btn-sm btn-success">Update</button>
-                            </td>
-                        } 
-                    </tr> 
-                    <tr>
+                    </tr>
+                    <tr onClick={selectFarmer}>
                         <td>1002</td>
+                        <td>11112</td>
                         <td>Farmer Two</td>
                         <td>000000000</td>
                         <td>1234-568-9012</td>
-                        {
-                            props.userRole === 'tscuser' &&
-                            <td>
-                                <button className="btn btn-sm btn-success">Update</button>
-                            </td>
-                        } 
-                    </tr> 
-                                      
+                    </tr>
+
                 </tbody>
             </table>
         </>

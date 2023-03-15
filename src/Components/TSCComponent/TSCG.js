@@ -17,12 +17,15 @@ export default function TSCG(){
         switch(currentTab)
         {
             case 1:
-                return <AddFarmer />;
+                return <AddFarmer userRole={authCtx.loggedUser.Role}/>;
             case 2:
-                return <FarmerList userRole={authCtx.loggedUser.Role}/>;
+                return <FarmerList userRole={authCtx.loggedUser.Role} showFarmer={viewFarmer}/>;
             default:
                 return '';
         }
+    }
+    const viewFarmer = (farmerId) =>{
+        changeCurentTab(1);   
     }
     // useEffect(() =>{},[currentTab]);
 

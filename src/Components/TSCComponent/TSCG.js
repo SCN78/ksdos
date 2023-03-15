@@ -19,7 +19,7 @@ export default function TSCG(){
             case 1:
                 return <AddFarmer />;
             case 2:
-                return <FarmerList />;
+                return <FarmerList userRole={authCtx.loggedUser.Role}/>;
             default:
                 return '';
         }

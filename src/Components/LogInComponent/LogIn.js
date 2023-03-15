@@ -69,6 +69,7 @@ function Login() {
                                     value={unit}
                                     onChange={(e) => setUnit(e.target.value)}
                                 >
+                                    <option value="SU">Select Unit</option>
                                     <option value="TSCG">Technical Service Centre - General</option>
                                     <option value="TSCR">Technical Service Centre - Reeling</option>
                                     <option value="BSFK">Basic Seed Farm- Kunigal</option>

@@ -2,7 +2,7 @@ import React from "react";
 
 export default function AddFarmer() {
 
-    const onAddFarmer = (e) => {
+    const onUpdateUser = (e) => {
         e.preventDefault();
     }
 
@@ -10,98 +10,144 @@ export default function AddFarmer() {
         <>
             <div className="container">
                 <form className="register-form">
-                    <div className="register-form-content">
-                        <h3 className="register-form-title">Rearing Sheet</h3>
-                        <div class="row">
-                            <div class="col-md-2">
-                                <div class="well" style={{height:10,width:20}}>
-                                <img src="%PUBLIC_URL%/favicon.ico" class="img-circle" />
-                                </div>
-                            </div>
-                            <div class="col-md-10">
-                                <div class="row">
-                                    <div className="col-md-3 col-lg-3">
-                                        <div className="form-group">
-                                            <label>Farmer Id</label>
-                                            <input
-                                                name="fid"
-                                                type="input"
-                                                required
-                                                className="form-control"
-                                                readOnly
-                                            />
-                                        </div>
+                    <table className="table add-farmer-table">
+                        <tbody>   
+                            <tr>
+                                <td className="farmer-image" rowSpan={2}>   
+                                    <img className="card-img" src="https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/bologna-3.jpg" alt="Bologna" />
+                                </td>
+                                <td>
+                                    <div className="form-group mt-3">
+                                        <label>Farmer Id:</label>
+                                        <input
+                                            name="fid"
+                                            type="input"
+                                            readOnly
+                                            className="form-control mt-1"
+                                        />
                                     </div>
-                                    <div className="col-md-3 col-lg-3">
-                                        <div className="form-group">
-                                            <label>Fruit Id</label>
-                                            <input
-                                                name="fid"
-                                                type="input"
-                                                required
-                                                className="form-control"                                                
-                                            />
-                                        </div>
+                                </td>
+                                <td>
+                                <div className="form-group mt-3">
+                                        <label>EPIC No:</label>
+                                        <input
+                                            name="epicid"
+                                            type="input"
+                                            required
+                                            className="form-control mt-1"
+                                        />
                                     </div>
-
-                                    <div className="col-md-3 col-lg-3">
-                                        <div className="form-group ">
-                                            <label>Aadhar No:</label>
-                                            <input
-                                                name="fid"
-                                                type="input"
-                                                required
-                                                className="form-control"
-                                            />
-                                        </div>
+                                </td>
+                                <td>
+                                    <div className="form-group mt-3">
+                                        <label>Resham Crad No:</label>
+                                        <input
+                                            name="fmobile"
+                                            type="input"
+                                            required
+                                            className="form-control mt-1"
+                                            placeholder="Mobile Number"
+                                        />
                                     </div>
-
-                                    <div className="col-md-3 col-lg-3">
-                                        <div className="form-group">
-                                            <label>Mobile No:</label>
-                                            <input
-                                                name="fid"
-                                                type="input"
-                                                required
-                                                className="form-control"
-                                            />
-                                        </div>
+                                </td>
+                                <td>
+                                    <div className="form-group mt-3">
+                                        <label>Aadhar No:</label>
+                                        <input
+                                            name="faadhar"
+                                            type="input"
+                                            required
+                                            className="form-control mt-1"
+                                            placeholder="AADHAR Number"
+                                        />
                                     </div>
-
-
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-4">
-                                        <div class="well">2</div>
+                                </td>
+                            </tr>
+                            <tr> 
+                                <td>
+                                <div className="form-group mt-3">
+                                        <label>Name:</label>
+                                        <input
+                                            name="fname"
+                                            type="input"
+                                            required
+                                            className="form-control mt-1"
+                                            placeholder="Farmer Name"
+                                        />
                                     </div>
-                                    <div class="col-md-4">
-                                        <div class="well">2</div>
+                                </td>
+                                <td>
+                                    <div className="form-group mt-3">
+                                        <label>Father Name:</label>
+                                        <input
+                                            name="fmobile"
+                                            type="input"
+                                            required
+                                            className="form-control mt-1"
+                                            placeholder="Mobile Number"
+                                        />
                                     </div>
-                                    <div class="col-md-4">
-                                        <div class="well">2</div>
+                                </td>
+                                <td>
+                                    <div className="form-group mt-3">
+                                        <label>Mobile No:</label>
+                                        <input
+                                            name="faadhar"
+                                            type="input"
+                                            required
+                                            className="form-control mt-1"
+                                            placeholder="Mobile Number"
+                                        />
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="well">6</div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="well">7</div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="well">8</div>
-                            </div>
-                        </div>
-
-                        <div className="d-grid gap-2 mt-3 j-c-c" >
-                            <button type="submit" className="btn btn-primary btn-lg" onClick={onAddFarmer}>
-                                Submit
-                            </button>
-                        </div>
+                                </td>
+                                <td>
+                                    <div className="form-group mt-3">
+                                        <label>Village</label>
+                                        <input
+                                            name="faadhar"
+                                            type="input"
+                                            required
+                                            className="form-control mt-1"
+                                            placeholder="Village"
+                                        />
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>                       
+                    </table>
+                    <div className="gap-2 mt-3" style={{textAlign:"center"}}>
+                        <button type="submit" className="btn btn-primary" onClick={onUpdateUser}>
+                            Update
+                        </button>
                     </div>
                 </form>
+                <div className="d-grid-2 mt-3">
+                    <div className="wrap-collabsible">
+                        <input id="collapsible1" className="toggle" type="checkbox" />
+                        <label htmlFor="collapsible1" className="lbl-toggle">Kuluvaru Register</label>
+                        <div className="collapsible-content"><div className="content-inner">
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="d-grid-2 mt-3">
+                    <div className="wrap-collabsible">
+                        <input id="collapsible2" className="toggle" type="checkbox" />
+                        <label htmlFor="collapsible2" className="lbl-toggle">Mulberry Statistics Register</label>
+                        <div className="collapsible-content"><div className="content-inner">
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="d-grid-2 mt-3">
+                    <div className="wrap-collabsible">
+                        <input id="collapsible3" className="toggle" type="checkbox" />
+                        <label htmlFor="collapsible3" className="lbl-toggle">Worm Test Register</label>
+                        <div className="collapsible-content"><div className="content-inner">
+                        </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </>
     )

@@ -18,6 +18,7 @@ export default function DODDashBoard() {
                         required
                         className="form-control mt-1"
                         placeholder="Select TSC"
+                        style={{backgroundColor:"green",color:"white"}}
                     >
                         <option value="SU">TSC - 1</option>
                         <option value="SU">TSC - 2</option>
@@ -32,6 +33,7 @@ export default function DODDashBoard() {
                         required
                         className="form-control mt-1"
                         placeholder="Select TSC"
+                        style={{backgroundColor:"green",color:"white"}}
                     >
                         <option value="SU">TSC1 - Form</option>
                         <option value="SU">TSC2 - Form</option>

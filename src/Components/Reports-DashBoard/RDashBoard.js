@@ -14,8 +14,10 @@ export default function RDashBoard(){
     }
 
     return(
-        <>     
-            <button className="btn btn-success">Home</button>      
+        <>
+             <div className="card bg-light text-dark" style={{textAlign:"center"}}>
+                <button className="btn btn-success" onClick={navigateToHome}>Home</button>                
+            </div>
             {authCtx.loggedUser.unit === "HOD" && <HODDasBoard />}
             {authCtx.loggedUser.unit === "DOD" && <DODDashBoard />}
         </>

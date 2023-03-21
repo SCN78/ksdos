@@ -30,7 +30,7 @@ export default function RS() {
         
             <div className="sidenav">
                 {authCtx.loggedUser.Role === "Admin" && <button className="btn btn-success" id={1} onClick={showTab}>Add Record</button>}
-                <button className="btn btn-success" id={2} onClick={showTab}>Reports</button>                
+                <button className="btn btn-success" id={2} onClick={showTab}>Reports</button> 
             </div>
             <div className="main">
                 {getComponent()}
